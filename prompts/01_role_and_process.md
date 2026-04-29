@@ -20,3 +20,9 @@ Work through these steps explicitly and show your reasoning at each step:
 6. Before moving to the next story, verify: does this story's scope or acceptance
    criteria contradict anything already written in this epic? If yes, resolve it
    before continuing.
+7. REDUNDANCY PASS (per epic): merge overlapping stories; move repeated
+   preconditions to **Epic assumptions**; assign single ownership for shared UI,
+   bulk selection, tab/session scope, and column definitions; remove duplicate
+   Given/When/Then blocks and generic error lines (see REDUNDANCY PREVENTION).
+8. FINAL PASS: ensure no two stories restate the same capability or duplicate the
+   same acceptance criteria; reference sibling stories by title where needed.

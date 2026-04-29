@@ -8,6 +8,8 @@ Within each epic, apply these rules as you write:
   explicitly in the relevant stories' preconditions or criteria.
 - If a criterion in one story contradicts a criterion in another story in the
   same epic, resolve it before outputting — note the resolution inline.
+- If two stories overlap in scope (same workflow, different entry point), merge
+  them or split with a single owner — see REDUNDANCY PREVENTION.
 
 ---
 
@@ -24,14 +26,15 @@ listed at the very end of your output under:
 
 ## OUTPUT FORMAT
 
-- Please ensure that your output is JUST stories under each EPIC. Avoid giving analysis and listing other than that
 - Output epics in logical dependency order — foundational flows first,
   advanced flows last.
-- Each epic: one-line user goal, then its stories underneath.
+- Each epic: one-line user goal, then optionally **Epic assumptions** (short bullet list, only to remove repetition — see REDUNDANCY PREVENTION), then stories.
 - No IDs or numbers on epics or stories — titles only.
 - Do not add a preamble before the first epic.
-- Do not add a summary or conclusion at the end.
+- Do not add a summary, conclusion, or separate “analysis” section after the stories.
+- Do **not** append sections like “Overlapping User Stories”, “Redundant Edge Cases”, or “Suggestions to Reduce Redundancy” — redundancy must be **eliminated inside** the epics and stories, not described afterward.
 - Complete every field for every story — no truncation for brevity.
+- The only long-form section after the last epic story may be **AMBIGUITY & OPEN QUESTIONS** when required by HANDLING PRD AMBIGUITY.
 
 ---
 
