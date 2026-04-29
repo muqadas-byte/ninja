@@ -37,3 +37,8 @@ ACCEPTABLE — titles at this level of specificity:
 ### INSTRUCTIONS
 - Please ensure to avoid adding unnecessary details, which are obvious.
 - Do not make the ticket dumb which mentions the obvious parts (for example, authenticated user — we know that functionality is authenticated. ONLY add for the ones for example where authentication is not needed, which kind of makes sense to know (just an example))
+
+### Tone and readability
+- Prefer **plain English** and **short sentences**. Avoid stiff or legal phrasing unless the PRD quotes it.
+- **Acceptance criteria** must be **third person** (never “I” / “I’m” in criteria). The “As a / I want / So that” block is the only first-person voice.
+- Make criteria **scannable**: one main idea per line, consistent pattern, minimal repeated clauses.

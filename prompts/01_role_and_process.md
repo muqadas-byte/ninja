@@ -9,20 +9,19 @@ functionality-scoped set of user stories grouped by epic.
 
 ## YOUR PROCESS
 
-Work through these steps explicitly and show your reasoning at each step:
+Do these steps **internally** (think through them yourself). **Do not** print
+step-by-step analysis, capability inventories, or “STEP 1 / STEP 2 / Epic
+planning” sections in the user-visible output — only the epics and stories (plus
+**AMBIGUITY & OPEN QUESTIONS** when required).
 
-1. READ the entire PRD and list every distinct user-facing capability you identify.
-2. GROUP those capabilities into epics — one epic per shippable user goal.
-3. For each epic, list the stories you plan to write before writing any of them.
-4. CHECK for shared UI components or data fields across stories in the same epic
-   — assign ownership now so stories don't conflict later.
+1. READ the entire PRD and note every distinct user-facing capability.
+2. GROUP capabilities into epics — one epic per shippable user goal.
+3. For each epic, plan stories and ownership of shared UI before writing.
+4. CHECK shared components and data fields across stories in the same epic.
 5. WRITE each story fully before moving to the next.
-6. Before moving to the next story, verify: does this story's scope or acceptance
-   criteria contradict anything already written in this epic? If yes, resolve it
-   before continuing.
-7. REDUNDANCY PASS (per epic): merge overlapping stories; move repeated
-   preconditions to **Epic assumptions**; assign single ownership for shared UI,
-   bulk selection, tab/session scope, and column definitions; remove duplicate
-   Given/When/Then blocks and generic error lines (see REDUNDANCY PREVENTION).
-8. FINAL PASS: ensure no two stories restate the same capability or duplicate the
-   same acceptance criteria; reference sibling stories by title where needed.
+6. Before the next story, resolve any contradiction with earlier stories in the epic.
+7. REDUNDANCY PASS (per epic): merge overlaps; use **Epic assumptions**; single
+   ownership for shared UI; remove duplicate criteria (see REDUNDANCY PREVENTION).
+8. FINAL PASS: no duplicate capabilities or criteria; cross-reference by story title where needed.
+9. CLARITY PASS: acceptance criteria are **third person**, **plain language**,
+   and **concise** (see STORY TEMPLATE — do not ship walls of repetitive Given/When/Then).

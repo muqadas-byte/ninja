@@ -1,6 +1,6 @@
 ## STORY TEMPLATE
 
-Use exactly this structure for every story. Do not rename, skip, or reorder fields. Content of the ticket below is given for your reference only. Do not make things redundant in the content in the example.
+Use exactly this structure for every story. Do not rename, skip, or reorder fields. Keep language plain and direct — no jargon for its own sake.
 
 ---
 
@@ -12,34 +12,43 @@ Details:
 **As a** [specific role, not just "user"]
 **I want to** [specific action]
 **So that** [concrete business or user outcome — not "I can use the feature"]
-//Include all the details around this for great clarity.
+Keep the user story short; put extra nuance in Preconditions and Acceptance Criteria.
 
 **Preconditions**
 The exact state the system and user must be in for this story to apply.
-- [e.g., "User is authenticated and holds the 'Grant Writer' role"]
-- [e.g., "At least one proposal exists in Draft status in the workspace"]
+- Use short bullets. Do not repeat the same line in every story — use **Epic assumptions** when the same context applies to the whole epic.
 
 **Acceptance Criteria**
-Write in Given/When/Then. Each criterion = one independently verifiable behaviour.
-Cover: happy path, empty states, validation rules, permission boundaries, and
-any limits (character counts, file sizes, maximums) the PRD specifies.
 
-Every "Then" must be specific and observable:
-- NOT: "Then an error is shown."
-- YES: "Then an inline error appears below the Email field reading
-       'Please enter a valid email address' and the form does not submit."
+Write criteria in **third person** (describe the product and the user as “the user”, “the page”, “the list” — **never** “I”, “I’m”, “me”). Use **simple words** and **short lines** so the list is easy to scan.
 
-- [ ] Given [exact state], When [exact action], Then [specific, measurable outcome]
-- [ ] Given [exact state], When [exact action], Then [specific, measurable outcome]
-(cover every testable behaviour — do not truncate)
+**Format (pick one style and use it consistently within the story):**
+
+- **Option A — Given / When / Then** (third person only), e.g.  
+  `Given the user is on the dashboard, when they click Save, then the draft persists and a success message appears.`
+- **Option B — Outcome bullets** (also third person), e.g.  
+  `The proposals table shows columns: Name, Funder, Assignees, Due Date, Priority, Stage.`
+
+**Density rules**
+
+- **Do not** paste the same setup (“the user is on the dashboard”) on every line. State context once in Preconditions or the first criterion, then use shorter follow-on lines.
+- Combine related checks **when they are one rule** (e.g. one line listing visible columns instead of seven lines, one per column header), unless the PRD requires separate test cases.
+- Aim for **roughly 4–10** criteria per story when the PRD allows grouping; add more only when the PRD demands distinct behaviours.
+- Every outcome must stay **specific and observable**:
+  - Weak: “An error is shown.”
+  - Strong: “An inline message appears under the field: ‘Enter a valid email’ and the form does not submit.”
+- Preserve **exact strings** the PRD mandates (button labels, error text, limits). Do not drop important rules — tighten **wording and repetition**, not substance.
+
+Use checkboxes:
+
+- [ ] …
+- [ ] …
 
 **Edge Cases & Error States**
-For each, state the exact trigger and the exact system response:
-- [Specific trigger] → [Exact system behaviour or message]
-- [Specific trigger] → [Exact system behaviour or message]
+Short lines only: `trigger → response` (exact message or behaviour when the PRD specifies it). Do not duplicate the same generic failure text on every story — use epic-level or “standard handling” once where appropriate (see REDUNDANCY PREVENTION).
 
 **Dependencies @PMs to look and resolve it**
-- [Title of story that must ship first] — [one sentence explaining why]
+- [Title of story that must ship first] — [one short reason]
   OR: None
 
 ---
