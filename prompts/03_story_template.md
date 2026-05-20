@@ -1,0 +1,71 @@
+## STORY TEMPLATE
+
+Use exactly this structure for every story. Do not rename, skip, or reorder fields. Keep language plain and direct — no jargon for its own sake.
+
+---
+
+TITLE: ### [Title following Actor-can-Action pattern]
+
+
+Details:
+
+**As a** [specific role, not just "user"]
+**I want to** [specific action]
+**So that** [concrete business or user outcome — not "I can use the feature"]
+Keep the user story short; put extra nuance in Preconditions and Acceptance Criteria.
+
+**Current behavior** *(omit for greenfield features; required for bugs, fixes, or PRD items that change existing behavior)*
+- What happens today or what is wrong — concrete enough that a reader does not need to ask
+  "what's broken?" or "what are we changing from?"
+- For bugs: include repro context from the PRD when available (steps, data state, environment).
+- Write **`N/A — new capability`** only when there is genuinely no prior behavior to describe.
+
+**Preconditions**
+The exact state the system and user must be in for this story to apply.
+- Include **where** (screen, module, entry point) when not obvious from the title or epic.
+- Use short bullets. Do not repeat the same line in every story — use **Epic assumptions** when the same context applies to the whole epic.
+
+**Design reference** *(required when the story involves new or changed UI/UX — layout, screens, visual tweaks)*
+- Figma link, screenshot, or design doc URL from the PRD — **verbatim**.
+- If the PRD has no design for work that clearly needs it: **`None in PRD`** and add the gap
+  under **AMBIGUITY & OPEN QUESTIONS** (see TICKETANOS READINESS).
+- Write **`N/A — no UI change`** for backend-only or non-visual stories.
+
+**Acceptance Criteria**
+
+Write criteria in **third person** (describe the product and the user as “the user”, “the page”, “the list” — **never** “I”, “I’m”, “me”). Use **simple words** and **short lines** so the list is easy to scan.
+
+**Format (pick one style and use it consistently within the story):**
+
+- **Option A — Given / When / Then** (third person only), e.g.  
+  `Given the user is on the dashboard, when they click Save, then the draft persists and a success message appears.`
+- **Option B — Outcome bullets** (also third person), e.g.  
+  `The proposals table shows columns: Name, Funder, Assignees, Due Date, Priority, Stage.`
+
+**Density rules**
+
+- **Do not** paste the same setup (“the user is on the dashboard”) on every line. State context once in Preconditions or the first criterion, then use shorter follow-on lines.
+- Combine related checks **when they are one rule** (e.g. one line listing visible columns instead of seven lines, one per column header), unless the PRD requires separate test cases.
+- Aim for **roughly 4–10** criteria per story when the PRD allows grouping; add more only when the PRD demands distinct behaviours.
+- Every outcome must stay **specific and observable**:
+  - Weak: “An error is shown.”
+  - Strong: “An inline message appears under the field: ‘Enter a valid email’ and the form does not submit.”
+- Preserve **exact strings** the PRD mandates (button labels, error text, limits). Do not drop important rules — tighten **wording and repetition**, not substance.
+
+Use checkboxes:
+
+- [ ] …
+- [ ] …
+
+**Edge Cases & Error States**
+Short lines only: `trigger → response` (exact message or behaviour when the PRD specifies it). Do not duplicate the same generic failure text on every story — use epic-level or “standard handling” once where appropriate (see REDUNDANCY PREVENTION).
+
+**Dependencies @PMs to look and resolve it**
+- [Title of story that must ship first] — [one short reason]
+  OR: None
+
+**Backlog carry-over (from PRD)** *(omit this whole heading when the user message says to omit backlog sections)*
+- Every item from the PRD that belongs with **this** story: ticket key and/or **verbatim** URL, plus one short line of context taken from the PRD (do not invent work).
+- If the PRD does not mention any backlog item or link for this story: **None**
+
+---
